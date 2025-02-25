@@ -70,7 +70,7 @@ Page d'inscription où les utilisateurs peuvent créer un nouveau compte, avec u
 Page d'accueil après connexion, affichant un message de bienvenue.
 
 ### `logout.php`
-Page de déconnexion qui détruit la session et redirige vers la page d'accueil.
+Page de déconnexion qui supprime certaines informations de session et redirige vers la page d'accueil. 
 
 --- 
 
