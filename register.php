@@ -26,8 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <title>Inscription</title>
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="css/register.css">
 </head>
+
 <body class="register-body">
     <div class="register-container">
         <h1 class="register-title">Inscription</h1>

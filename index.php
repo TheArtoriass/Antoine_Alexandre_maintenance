@@ -5,7 +5,7 @@ session_start();
 <html>
 <head>
     <title>Accueil</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body class="index-body">
     <div class="index-container">

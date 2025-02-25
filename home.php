@@ -11,7 +11,7 @@ if (!isset($_SESSION['user'])) {
 <html>
 <head>
     <title>Accueil Connecté</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body class="home-body">
     <div class="home-container">
