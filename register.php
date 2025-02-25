@@ -13,16 +13,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $query = "SELECT * FROM users WHERE username = '$username'";
     $result = mysqli_query($conn, $query);
 
-    if (mysqli_num_rows($result) > 0) {
-        $message = "Nom d'utilisateur déjà pris.";
+    // Insertion du nouvel utilisateur dans la base de données
+    $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+    if (mysqli_query($conn, $query)) {
+        $message = "Inscription réussie. Vous pouvez maintenant vous connecter.";
     } else {
-        // Insertion du nouvel utilisateur dans la base de données
-        $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
-        if (mysqli_query($conn, $query)) {
-            $message = "Inscription réussie. Vous pouvez maintenant vous connecter.";
-        } else {
-            $message = "Erreur : " . mysqli_error($conn);
-        }
+        $message = "Erreur : " . mysqli_error($conn);
     }
 }
 ?>
