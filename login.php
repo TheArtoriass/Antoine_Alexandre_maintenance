@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Requête SQL pour vérifier les identifiants de l'utilisateur
     $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
     $result = mysqli_query($conn, $query);
+
     if (mysqli_num_rows($result) > 0) {
         $_SESSION['user'] = $username;
         header("Location: home.php");
@@ -22,13 +23,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <title>Connexion</title>
+    <link rel="stylesheet" href="login.css">
 </head>
-<body>
-    <!-- Formulaire de connexion -->
-    <form method="POST">
-        <input type="text" name="username" placeholder="Nom d'utilisateur" required>
-        <input type="password" name="password" placeholder="Mot de passe" required>
-        <button type="submit">Se connecter</button>
-    </form>
+<body class="login-body">
+    <div class="login-container">
+        <h1 class="login-title">Connexion</h1>
+        <!-- Formulaire de connexion -->
+        <form method="POST" class="login-form">
+            <input type="text" name="username" placeholder="Nom d'utilisateur" required class="login-input">
+            <input type="password" name="password" placeholder="Mot de passe" required class="login-input">
+            <button type="submit" class="login-button">Se connecter</button>
+        </form>
+        <br>
+        <a href="index.php" class="login-link">Retour à l'accueil</a>
+        <br>
+        <a href="register.php" class="login-link">Pas encore inscrit ? Inscrivez-vous</a>
+    </div>
 </body>
 </html>

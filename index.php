@@ -5,10 +5,13 @@ session_start();
 <html>
 <head>
     <title>Accueil</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    <!-- Page d'accueil avec un lien vers la page de connexion -->
-    <h1>Bienvenue</h1>
-    <a href="login.php">Connexion</a>
+<body class="index-body">
+    <div class="index-container">
+        <!-- Page d'accueil avec un lien vers la page de connexion -->
+        <h1 class="index-title">Bienvenue</h1>
+        <a href="login.php" class="index-link">Connexion</a>
+    </div>
 </body>
 </html>
