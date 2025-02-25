@@ -5,3 +5,5 @@ CREATE TABLE users (
     username VARCHAR(50) NOT NULL,
     password VARCHAR(50) NOT NULL /* Mot de passe stocké en clair (non sécurisé) */
 );
+
+INSERT INTO users (username, password) VALUES ('testuser', 'password123');
